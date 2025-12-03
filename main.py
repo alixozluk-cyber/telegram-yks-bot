@@ -86,6 +86,7 @@ def send_message(text):
     payload = {
         "chat_id": CHAT,
         "text": text,
+        "parse_mode": "HTML",
         # "parse_mode": "Markdown"  # istersen açabilirsin
     }
     try:
