@@ -69,7 +69,7 @@ def days_until(target_date: date) -> int:
 def build_message():
     d = days_until(YKS_DATE)
     if d > 1:
-        base = f"📅 YKS'ye *{d} gün* kaldı!"
+        base = f"<b>📅 YKS'ye son *{d} gün* kaldı!</b>"
     elif d == 1:
         base = "📅 Yarın YKS! Son düzeltmeler zamanı!"
     elif d == 0:
@@ -79,7 +79,7 @@ def build_message():
 
     motiv = random.choice(motivasyonlar)
     # Telegram Markdown ya da HTML kullanmak istiyorsan parse_mode ekleyebilirsin.
-    mesaj = f"{base}\n\n🔥 {motiv}"
+    mesaj = f"{base}\n\n🔥 <i>{motiv}</i>"
     return mesaj
 
 def send_message(text):
